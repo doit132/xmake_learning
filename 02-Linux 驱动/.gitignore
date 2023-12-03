@@ -1,0 +1,7 @@
+projects/*/build/
+.xmake/
+build/
+projects/*/.cache/
+.cache/
+compile_commands.json
+
