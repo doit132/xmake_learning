@@ -7,7 +7,7 @@ local ProjectName = g_ProjectName
 local sdkdir = "/usr/local/arm/bin/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf"
 local bindir = sdkdir.."/bin"
 -- Linux 内核头文件目录, 这个头文件目录需要自己编译生成, 生成命令: make ARCH=arm INSTALL_HDR_PATH=./head_files/ headers_install
-local KDIR = "/home/doit/STM32MP157_Linux/linux5.4.31/head_files/include"
+local KDIR = "/home/doit/STM32MP157_Linux/linux5.4.31/"
 
 -- ### 基本设置
 -- 设置工程名
@@ -43,6 +43,7 @@ set_toolchains("arm-none-linux-gnueabihf")
 target(ProjectName)
     add_rules("platform.linux.driver")
     add_files("src/*.c")
+    -- 前提是: 必须先编译 linux 内核源码文件
     set_values("linux.driver.linux-headers", KDIR)
     set_license("GPL-2.0")
 target_end()
