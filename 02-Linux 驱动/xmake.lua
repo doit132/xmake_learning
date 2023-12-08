@@ -1,12 +1,12 @@
 -- ### 设置一些全局变量
 -- 项目名称
-g_ProjectName = "STM32MP157"
+g_ProjectName = "stm32mp157"
 
 -- ### 设置一些局部变量
 local ProjectName = g_ProjectName
 local sdkdir = "/usr/local/arm/bin/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf"
 local bindir = sdkdir.."/bin"
--- Linux 内核头文件目录, 这个头文件目录需要自己编译生成, 生成命令: make ARCH=arm INSTALL_HDR_PATH=./head_files/ headers_install
+-- Linux 内核头文件目录, 这个头文件目录需要自己编译生成, 生成命令: make ARCH=arm INSTALL_HDR_PATH=./head_files/ headers_instal, 最终经过实际测试证明, 无需生成所谓的头文件目录, 而是先编译 linux 源码, 然后使用 linux 源码目录即可
 local KDIR = "/home/doit/STM32MP157_Linux/linux5.4.31/"
 
 -- ### 基本设置

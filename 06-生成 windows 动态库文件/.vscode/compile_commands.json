@@ -1,0 +1,11 @@
+[
+{
+  "directory": "/home/doit/xmake_learning/06-生成 windows 动态库文件",
+  "arguments": ["/usr/local/arm/bin/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/clang", "-c", "-Qunused-arguments", "-m64", "-fexceptions", "-fcxx-exceptions", "-o", "build/.objs/test/windows/x86_64/release/src/main.c.obj", "src/main.c"],
+  "file": "src/main.c"
+},
+{
+  "directory": "/home/doit/xmake_learning/06-生成 windows 动态库文件",
+  "arguments": ["/usr/local/arm/bin/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/clang", "-c", "-Qunused-arguments", "-m64", "-fexceptions", "-fcxx-exceptions", "-o", "build/.objs/foo/windows/x86_64/release/src/foo.c.obj", "src/foo.c"],
+  "file": "src/foo.c"
+}]
